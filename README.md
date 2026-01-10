@@ -843,26 +843,7 @@
     <div class="scan-line"></div>
     
     <!-- 状态指示器 -->
-    <div class="status-indicator" id="statusIndicator">CH-AI 系统: 初始化</div>
-    
-    <!-- 编辑模态框 -->
-    <div class="edit-modal" id="editModal">
-        <div class="edit-modal-content">
-            <div class="edit-modal-header">编辑内容</div>
-            <label class="edit-modal-label">编辑内容:</label>
-            <textarea class="edit-textarea" id="editTextarea"></textarea>
-            <label class="edit-modal-label">修改密码 (20100812):</label>
-            <input type="password" class="edit-password-input" id="editPasswordInput" placeholder="输入修改密码">
-            <div class="edit-modal-buttons">
-                <button class="edit-modal-button save" id="editSaveButton">保存</button>
-                <button class="edit-modal-button cancel" id="editCancelButton">取消</button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- 编辑通知 -->
-    <div class="edit-notification" id="editNotification"></div>
-    
+    <div class="status-indicator" id="statusIndicator">CH-AI 系统: 初始化</div
     <!-- 加载界面 -->
     <div class="loading-screen" id="loadingScreen">
         <div class="title-container">
