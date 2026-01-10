@@ -1,5 +1,5 @@
 # Mengangchengnline.github.io
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -388,24 +388,6 @@
             line-height: 1.6;
             font-size: 1rem;
             margin-top: 15px;
-            position: relative;
-            padding: 5px;
-        }
-        
-        .article-content:hover {
-            background-color: rgba(255, 102, 0, 0.05);
-        }
-        
-        .editable-text {
-            cursor: pointer;
-            transition: all 0.3s;
-            padding: 2px 4px;
-            border-radius: 2px;
-        }
-        
-        .editable-text:hover {
-            background-color: rgba(255, 102, 0, 0.1);
-            outline: 1px dashed rgba(255, 102, 0, 0.3);
         }
         
         .article-tag {
@@ -465,12 +447,6 @@
             padding: 30px 20px;
             position: relative;
             z-index: 3;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .content-text:hover {
-            background-color: rgba(255, 102, 0, 0.05);
         }
         
         .submenu-content-text {
@@ -552,132 +528,6 @@
         .back-button:hover, .switch-button:hover {
             background-color: #ff6600;
             color: #000;
-        }
-        
-        /* 编辑模态框样式 */
-        .edit-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        
-        .edit-modal-content {
-            background-color: #000;
-            border: 2px solid #ff6600;
-            width: 90%;
-            max-width: 500px;
-            padding: 20px;
-            box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
-        }
-        
-        .edit-modal-header {
-            color: #ff6600;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            text-align: center;
-            border-bottom: 1px solid rgba(255, 102, 0, 0.3);
-            padding-bottom: 10px;
-        }
-        
-        .edit-modal-label {
-            color: #ff8844;
-            display: block;
-            margin-bottom: 5px;
-            font-size: 1rem;
-        }
-        
-        .edit-textarea {
-            width: 100%;
-            height: 150px;
-            background-color: rgba(20, 10, 0, 0.5);
-            border: 1px solid #ff6600;
-            color: #ff8844;
-            padding: 10px;
-            font-size: 1rem;
-            resize: vertical;
-            margin-bottom: 15px;
-        }
-        
-        .edit-password-input {
-            width: 100%;
-            padding: 8px;
-            background-color: rgba(20, 10, 0, 0.5);
-            border: 1px solid #ff6600;
-            color: #ff8844;
-            margin-bottom: 15px;
-            font-size: 1rem;
-        }
-        
-        .edit-modal-buttons {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-        }
-        
-        .edit-modal-button {
-            flex: 1;
-            padding: 10px;
-            background: none;
-            border: 1px solid #ff6600;
-            color: #ff6600;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 0.95rem;
-        }
-        
-        .edit-modal-button:hover {
-            background-color: #ff6600;
-            color: #000;
-        }
-        
-        .edit-modal-button.save {
-            border-color: #00ff00;
-            color: #00ff00;
-        }
-        
-        .edit-modal-button.save:hover {
-            background-color: #00ff00;
-            color: #000;
-        }
-        
-        .edit-modal-button.cancel {
-            border-color: #ff0000;
-            color: #ff0000;
-        }
-        
-        .edit-modal-button.cancel:hover {
-            background-color: #ff0000;
-            color: #000;
-        }
-        
-        .edit-notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: rgba(0, 0, 0, 0.9);
-            border: 1px solid #ff6600;
-            color: #ff6600;
-            padding: 10px 20px;
-            z-index: 1001;
-            display: none;
-            box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
-        }
-        
-        .edit-notification.success {
-            border-color: #00ff00;
-            color: #00ff00;
-        }
-        
-        .edit-notification.error {
-            border-color: #ff0000;
-            color: #ff0000;
         }
         
         .glitch-effect {
@@ -817,11 +667,6 @@
                 padding: 6px 10px;
                 font-size: 0.8rem;
             }
-            
-            .edit-modal-content {
-                width: 95%;
-                padding: 15px;
-            }
         }
         
         @media (max-width: 360px) {
@@ -843,7 +688,8 @@
     <div class="scan-line"></div>
     
     <!-- 状态指示器 -->
-    <div class="status-indicator" id="statusIndicator">CH-AI 系统: 初始化</div
+    <div class="status-indicator" id="statusIndicator">CH-AI 系统: 初始化</div>
+    
     <!-- 加载界面 -->
     <div class="loading-screen" id="loadingScreen">
         <div class="title-container">
@@ -866,7 +712,7 @@
         
         <!-- 单一进入系统按钮 -->
         <button class="menu-button" id="menuButton">进入系统</button>
-    </div>
+    </div>  
         <!-- 时报界面 - 第一个界面 -->
     <div class="menu-screen" id="timescreen">
         <div class="menu-header">
@@ -884,10 +730,10 @@
                     <div class="timescreen-article">
                         <div class="article-title">
                             <span class="article-date">3025-11-23</span>
-                            <span>文本</span>
+                            <span>孙笑川大战宇智波斑</span>
                         </div>
                         <div class="article-content">
-                            <p class="editable-text" data-edit-id="headline-content-1">此处应填有文本。</p>
+                            <p>此处应填有文本。</p>
                         </div>
                         <div>
                             <span class="article-tag">科技</span>
@@ -907,10 +753,10 @@
                     <div class="timescreen-article">
                         <div class="article-title">
                             <span class="article-date">3025-11-22</span>
-                            <span>文本</span>
+                            <span>反对甜甜圈游行</span>
                         </div>
                         <div class="article-content">
-                            <p class="editable-text" data-edit-id="city-content-1">此处应填有文本。</p>
+                            <p>此处应填有文本。</p>
                         </div>
                         <div>
                             <span class="article-tag">农业</span>
@@ -930,10 +776,10 @@
                     <div class="timescreen-article">
                         <div class="article-title">
                             <span class="article-date">3025-11-20</span>
-                            <span>文本</span>
+                            <span>1451410086</span>
                         </div>
                         <div class="article-content">
-                            <p class="editable-text" data-edit-id="tech-content-1">此处应填有文本。</p>
+                            <p>此处应填有文本。</p>
                         </div>
                         <div>
                             <span class="article-tag">科研</span>
@@ -972,8 +818,8 @@
                 编年史
             </div>
             <div class="section-content" id="chronicles">
-                <div class="content-text editable-text" data-edit-id="chronicles-content">
-                    此处应填有文本
+                <div class="content-text">
+                    此处应填有文本。
                 </div>
             </div>
         </div>
@@ -984,8 +830,8 @@
                 公司
             </div>
             <div class="section-content" id="company">
-                <div class="content-text editable-text" data-edit-id="company-content">
-                    此处应填有文本
+                <div class="content-text">
+                    此处应填有文本。
                 </div>
             </div>
         </div>
@@ -996,8 +842,8 @@
                 种族
             </div>
             <div class="section-content" id="races">
-                <div class="content-text editable-text" data-edit-id="races-content">
-                    此处应填有文本
+                <div class="content-text">
+                    此处应填有文本。
                 </div>
             </div>
         </div>
@@ -1008,8 +854,8 @@
                 民间组织
             </div>
             <div class="section-content" id="civilian-orgs">
-                <div class="content-text editable-text" data-edit-id="civilian-orgs-content">
-                    此处应填有文本
+                <div class="content-text">
+                    此处应填有文本。
                 </div>
             </div>
         </div>
@@ -1020,8 +866,8 @@
                 神秘术
             </div>
             <div class="section-content" id="mysticism">
-                <div class="content-text editable-text" data-edit-id="mysticism-content">
-                    此处应填有文本
+                <div class="content-text">
+                    此处应填有文本。
                 </div>
             </div>
         </div>
@@ -1032,8 +878,8 @@
                 官方组织
             </div>
             <div class="section-content" id="official-orgs">
-                <div class="content-text editable-text" data-edit-id="official-orgs-content">
-                    此处应填有文本
+                <div class="content-text">
+                    此处应填有文本。
                 </div>
             </div>
         </div>
@@ -1044,8 +890,8 @@
                 梅林坐标系
             </div>
             <div class="section-content" id="merlin-coordinates">
-                <div class="content-text editable-text" data-edit-id="merlin-coordinates-content">
-                    此处应填有文本
+                <div class="content-text">
+                    此处应填有文本。
                 </div>
             </div>
         </div>
@@ -1056,8 +902,8 @@
                 政权
             </div>
             <div class="section-content" id="government">
-                <div class="content-text editable-text" data-edit-id="government-content">
-                    此处应填有文本
+                <div class="content-text">
+                    此处应填有文本。
                 </div>
             </div>
         </div>
@@ -1068,8 +914,8 @@
                 宗教
             </div>
             <div class="section-content" id="religion">
-                <div class="content-text editable-text" data-edit-id="religion-content">
-                    此处应填有文本
+                <div class="content-text">
+                    此处应填有文本。
                 </div>
             </div>
         </div>
@@ -1079,8 +925,8 @@
                 梦羊城市政简章
             </div>
             <div class="section-content" id="city-charter">
-                <div class="content-text editable-text" data-edit-id="city-charter-content">
-                    此处应填有文本
+                <div class="content-text">
+                    此处应填有文本。
                 </div>
             </div>
         </div>
@@ -1091,8 +937,8 @@
                 法律法规
             </div>
             <div class="section-content" id="laws">
-                <div class="content-text editable-text" data-edit-id="laws-content">
-                    此处应填有文本
+                <div class="content-text">
+                    此处应填有文本。
                 </div>
             </div>
         </div>
@@ -1103,8 +949,8 @@
                 炼金术
             </div>
             <div class="section-content" id="alchemy">
-                <div class="content-text editable-text" data-edit-id="alchemy-content">
-                    此处应填有文本
+                <div class="content-text">
+                    此处应填有文本。
                 </div>
             </div>
         </div>
@@ -1115,8 +961,8 @@
                 认知腐蚀抑制线
             </div>
             <div class="section-content" id="cognition-suppression">
-                <div class="content-text editable-text" data-edit-id="cognition-suppression-content">
-                    此处应填有文本
+                <div class="content-text">
+                    此处应填有文本。
                 </div>
             </div>
         </div>
@@ -1148,10 +994,10 @@
             地图系统正在开发中...
             <br>
             <br>
-            懒得说什么事加载中...
+            什么东西加载中...
             <br>
             <br>
-            当前维度：那有文本
+            当前维度：正常
             <br>
             状态：稳定
         </div>
@@ -1202,14 +1048,6 @@
         const mapToTimescreenButton = document.getElementById('mapToTimescreenButton');
         const mapToDatabaseButton = document.getElementById('mapToDatabaseButton');
         
-        // 获取编辑相关元素
-        const editModal = document.getElementById('editModal');
-        const editTextarea = document.getElementById('editTextarea');
-        const editPasswordInput = document.getElementById('editPasswordInput');
-        const editSaveButton = document.getElementById('editSaveButton');
-        const editCancelButton = document.getElementById('editCancelButton');
-        const editNotification = document.getElementById('editNotification');
-        
         // 检查元素是否找到
         if (!loadingScreen || !timescreen || !databaseScreen || !mapScreen || !loadingBar || !percentage || !loadingText || !finalMessage || !menuButton || !statusIndicator) {
             console.error("部分元素未找到，请检查HTML结构");
@@ -1226,8 +1064,6 @@
         timescreen.style.display = 'none';
         databaseScreen.style.display = 'none';
         mapScreen.style.display = 'none';
-        editModal.style.display = 'none';
-        editNotification.style.display = 'none';
         
         // 创建音频上下文（用于生成音效）
         let audioContext;
@@ -1384,59 +1220,6 @@
             }
         }
         
-        // 播放编辑确认音效
-        function playEditSound(type = 'open') {
-            if (!isAudioContextInitialized || !canPlaySound()) return;
-            
-            try {
-                const oscillator = audioContext.createOscillator();
-                const gainNode = audioContext.createGain();
-                
-                oscillator.connect(gainNode);
-                gainNode.connect(audioContext.destination);
-                
-                if (type === 'open') {
-                    // 打开编辑框音效
-                    oscillator.type = 'sine';
-                    oscillator.frequency.setValueAtTime(400, audioContext.currentTime);
-                    oscillator.frequency.setValueAtTime(600, audioContext.currentTime + 0.1);
-                    
-                    gainNode.gain.setValueAtTime(0.04, audioContext.currentTime);
-                    gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.2);
-                    
-                    oscillator.start();
-                    oscillator.stop(audioContext.currentTime + 0.2);
-                } else if (type === 'success') {
-                    // 保存成功音效
-                    oscillator.type = 'sine';
-                    oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
-                    oscillator.frequency.setValueAtTime(800, audioContext.currentTime + 0.05);
-                    oscillator.frequency.setValueAtTime(1000, audioContext.currentTime + 0.1);
-                    
-                    gainNode.gain.setValueAtTime(0.05, audioContext.currentTime);
-                    gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.15);
-                    
-                    oscillator.start();
-                    oscillator.stop(audioContext.currentTime + 0.15);
-                } else if (type === 'error') {
-                    // 错误音效
-                    oscillator.type = 'square';
-                    oscillator.frequency.setValueAtTime(300, audioContext.currentTime);
-                    oscillator.frequency.setValueAtTime(200, audioContext.currentTime + 0.05);
-                    
-                    gainNode.gain.setValueAtTime(0.06, audioContext.currentTime);
-                    gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.1);
-                    
-                    oscillator.start();
-                    oscillator.stop(audioContext.currentTime + 0.1);
-                }
-                
-                console.log(`播放编辑音效: ${type}`);
-            } catch (error) {
-                console.error("播放编辑音效时出错:", error);
-            }
-        }
-        
         // 播放扫描线音效 - 轻微、快速
         function playScanlineSound() {
             if (!isAudioContextInitialized || !canPlaySound()) return;
@@ -1539,10 +1322,6 @@
         const ERROR_COOLDOWN = 300; // 错误效果冷却时间(ms)
         const RAPID_CLICK_THRESHOLD = 3; // 快速点击次数阈值
         const RAPID_CLICK_WINDOW = 1000; // 快速点击时间窗口(ms)
-        
-        // 编辑相关变量
-        let currentEditElement = null;
-        const EDIT_PASSWORD = "20100812"; // 修改密码
         
         // 更新状态指示器
         function updateStatus(text) {
@@ -1677,127 +1456,6 @@
             }
             
             return false;
-        }
-        
-        // 显示编辑通知
-        function showEditNotification(message, type = 'info') {
-            if (!editNotification) return;
-            
-            editNotification.textContent = message;
-            editNotification.className = 'edit-notification';
-            editNotification.classList.add(type);
-            editNotification.style.display = 'block';
-            
-            // 播放音效
-            if (type === 'success') {
-                playEditSound('success');
-            } else if (type === 'error') {
-                playEditSound('error');
-            }
-            
-            // 3秒后隐藏
-            setTimeout(() => {
-                editNotification.style.display = 'none';
-            }, 3000);
-        }
-        
-        // 打开编辑模态框
-        function openEditModal(element) {
-            if (!element || !editModal || !editTextarea) return;
-            
-            currentEditElement = element;
-            editTextarea.value = element.textContent;
-            editPasswordInput.value = '';
-            editModal.style.display = 'flex';
-            
-            // 播放打开编辑框音效
-            playEditSound('open');
-            
-            console.log("打开编辑模态框");
-        }
-        
-        // 关闭编辑模态框
-        function closeEditModal() {
-            if (!editModal) return;
-            
-            editModal.style.display = 'none';
-            currentEditElement = null;
-            editTextarea.value = '';
-            editPasswordInput.value = '';
-            
-            console.log("关闭编辑模态框");
-        }
-        
-        // 保存编辑内容
-        function saveEditContent() {
-            if (!currentEditElement || !editTextarea || !editPasswordInput) return;
-            
-            const newText = editTextarea.value.trim();
-            const password = editPasswordInput.value.trim();
-            
-            // 检查密码
-            if (password !== EDIT_PASSWORD) {
-                showEditNotification("密码错误！修改密码为: 20100812", 'error');
-                return;
-            }
-            
-            // 更新文本内容
-            currentEditElement.textContent = newText;
-            
-            // 显示成功通知
-            showEditNotification("内容修改成功！", 'success');
-            
-            // 关闭模态框
-            closeEditModal();
-            
-            // 触发故障效果
-            triggerGlitch(currentEditElement);
-            
-            console.log("保存编辑内容");
-        }
-        
-        // 初始化编辑功能
-        function initEditFunctionality() {
-            console.log("初始化编辑功能...");
-            
-            // 为所有可编辑文本添加点击事件
-            document.addEventListener('click', function(event) {
-                const editableElement = event.target.closest('.editable-text');
-                if (editableElement && editModal.style.display === 'none') {
-                    openEditModal(editableElement);
-                    event.stopPropagation();
-                }
-            });
-            
-            // 绑定保存按钮事件
-            if (editSaveButton) {
-                editSaveButton.addEventListener('click', saveEditContent);
-            }
-            
-            // 绑定取消按钮事件
-            if (editCancelButton) {
-                editCancelButton.addEventListener('click', closeEditModal);
-            }
-            
-            // 点击模态框外部关闭
-            editModal.addEventListener('click', function(event) {
-                if (event.target === editModal) {
-                    closeEditModal();
-                }
-            });
-            
-            // 回车键保存，ESC键取消
-            document.addEventListener('keydown', function(event) {
-                if (editModal.style.display === 'flex') {
-                    if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
-                        saveEditContent();
-                    } else if (event.key === 'Escape') {
-                        closeEditModal();
-                    }
-                }
-            });
-            
-            console.log("编辑功能初始化完成");
         }
         
         // 更新进度条 - 加快加载速度，加入更多错误特效
@@ -2347,9 +2005,6 @@
             
             // 初始化音频上下文
             initAudioContext();
-            
-            // 初始化编辑功能
-            initEditFunctionality();
             
             setupMenuEvents();
             setupKeyboardShortcuts();
