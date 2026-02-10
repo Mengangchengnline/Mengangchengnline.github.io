@@ -1180,7 +1180,7 @@
             <div class="section-content" id="headline-news">
                 <div class="timescreen-article">
                     <div class="article-title">
-                        <span class="article-date">3025-11-23</span>
+                        <span class="article-date">2025-11-23</span>
                         <span>我自行输入文本</span>
                     </div>
                     <div class="article-content">
@@ -1205,7 +1205,7 @@
             <div class="section-content" id="city-dynamics">
                 <div class="timescreen-article">
                     <div class="article-title">
-                        <span class="article-date">3025-11-22</span>
+                        <span class="article-date">2025-1-22</span>
                         <span>我自行输入文本</span>
                     </div>
                     <div class="article-content">
@@ -1230,7 +1230,7 @@
             <div class="section-content" id="tech-frontier">
                 <div class="timescreen-article">
                     <div class="article-title">
-                        <span class="article-date">3025-11-20</span>
+                        <span class="article-date">2025-1-20</span>
                         <span>我自行输入文本</span>
                     </div>
                     <div class="article-content">
@@ -1382,7 +1382,7 @@
 <div class="map-screen" id="mapScreen">
     <div class="menu-header">
         <h2 class="menu-title neon-glow">梦羊城地图</h2>
-        <div class="menu-subtitle">CH-AI 空间导航系统 v1.5.3 • 梅林坐标系激活</div>
+        <div class="menu-subtitle">CH-AI 空间导航系统 v1.5.3 • 坐标系激活</div>
     </div>
     
     <div class="menu-content">
@@ -1391,11 +1391,11 @@
             地图系统正在开发中...
             <br>
             <br>
-            梅林坐标系加载中...
+            坐标系加载中...
             <br>
             <br>
             <div style="color: #00ff00; margin: 10px 0;">
-                <i class="fas fa-circle" style="color: #00ff00;"></i> 当前维度：Alpha-7
+                <i class="fas fa-circle" style="color: #00ff00;"></i> 当前维度：正常
             </div>
             <div style="color: #00ff00; margin: 10px 0;">
                 <i class="fas fa-check-circle" style="color: #00ff00;"></i> 状态：稳定
