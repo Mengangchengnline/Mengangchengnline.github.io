@@ -1,4 +1,5 @@
 # Mengangchengnline.github.io
+```html
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -177,13 +178,16 @@
     to { box-shadow: 0 0 25px rgba(255, 165, 0, 0.8), inset 0 0 20px rgba(255, 165, 0, 0.5); }
   }
 
+  /* ========== 导航栏修改：添加固定定位 ========== */
   .navbar {
     height: calc(100vh / 15);
     background-color: #FF8C00;
     display: flex;
     align-items: center;
     width: 100%;
-    position: relative;
+    position: fixed;      /* 新增：固定定位 */
+    top: 0;               /* 新增：紧贴顶部 */
+    left: 0;              /* 新增：紧贴左侧 */
     z-index: 100;
   }
 
@@ -382,6 +386,7 @@
     border-left: 4px solid #FF8C00;
   }
 
+  /* ========== 主内容区修改：添加 margin-top 补偿导航栏高度 ========== */
   .main-content {
     height: calc(100vh - (100vh / 15));
     width: 100%;
@@ -390,6 +395,7 @@
     box-shadow: inset 0px -20px 40px rgba(0, 0, 0, 0.05);
     position: relative;
     z-index: 10;
+    margin-top: calc(100vh / 15);  /* 新增：为固定导航栏留出空间 */
   }
 
   .scroll-section {
@@ -1166,7 +1172,15 @@
       .boot-percentage, .loading-percentage { font-size: 0.88rem; }
       #boot-start-btn { padding: 10px 40px; font-size: 1.44rem; }
 
-      .navbar { justify-content: space-between; height: calc(100vh / 18.75); }
+      /* ========== 移动端导航栏修改 ========== */
+      .navbar { 
+          justify-content: space-between; 
+          height: calc(100vh / 18.75); 
+          position: fixed;   /* 确保移动端也是固定定位 */
+          top: 0;
+          left: 0;
+          width: 100%;
+      }
       .isc-logo { width: auto; font-size: 4vw; padding-left: 3.2vw; flex: 0 0 auto; }
       .spacer { display: none; }
       .nav-links { flex: 1; justify-content: space-evenly; gap: 1.6vw; padding: 0 1.6vw; width: auto; }
@@ -1205,7 +1219,11 @@
       .close-btn { font-size: 0.96rem; top: 2.4vh; right: 2.4vw; }
       .close-btn span { font-size: 1.6rem; margin-right: 6px; }
 
-      .main-content { height: calc(100vh - (100vh / 18.75)); }
+      /* ========== 移动端主内容区修改 ========== */
+      .main-content { 
+          height: calc(100vh - (100vh / 18.75)); 
+          margin-top: calc(100vh / 18.75);  /* 新增：补偿移动端导航栏高度 */
+      }
       .scroll-section { padding: 4% 4%; }
       .gif-container { width: 72vw; height: 28vh; }
       .section-title { font-size: 4.8vw; width: auto; display: inline-block; padding-right: 12px; margin-bottom: 32px; }
@@ -2774,3 +2792,4 @@
 
 </body>
 </html>
+```
