@@ -398,7 +398,7 @@
   .scroll-section {
     width: 100%;
     min-height: 100%;
-    padding: 0 10% 5% 10%;   /* 修复：顶部内边距归零，消除空白 */
+    padding: 0 10% 5% 10%;   /* 顶部内边距归零 */
     display: flex;
     flex-direction: column;
   }
@@ -421,7 +421,7 @@
   .gif-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;   /* 如需完整显示可改为 contain */
   }
 
   .content-section {
@@ -609,14 +609,15 @@
     font-family: 'Orbitron', sans-serif;
   }
 
+  /* 关键修复：全屏布局改为 fixed，防止滚动影响 */
   .dh-layout-wrapper {
-      position: absolute;
+      position: fixed;             /* 原为 absolute，改为 fixed 避免随滚动内容移动 */
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: transparent;
-      z-index: 50;
+      width: 100vw;
+      height: 100vh;
+      background-color: #ffffff;   /* 添加背景色遮挡底层 */
+      z-index: 50;                 /* 在 main-content 之上，导航栏之下 */
       overflow: hidden;
   }
 
@@ -787,7 +788,8 @@
   }
 
   .osc-bounding-box {
-      width: 700px;
+      max-width: 700px;            /* 改为相对单位，防止溢出 */
+      width: 90vw;
       height: 420px;
       position: relative;
       margin-left: 10%;
@@ -807,7 +809,7 @@
       --led-on: #ff3333;
 
       transform: scale(0.7);
-      transform-origin: top left;       /* 修正缩放原点 */
+      transform-origin: top left;
       position: absolute;
       top: 0;
       left: 0;
@@ -1223,7 +1225,7 @@
           height: calc(100vh - (100vh / 18.75)); 
           margin-top: calc(100vh / 18.75);
       }
-      .scroll-section { padding: 0 4% 4% 4%; }   /* 移动端顶部内边距也归零 */
+      .scroll-section { padding: 0 4% 4% 4%; }
       .gif-container { width: 72vw; height: 28vh; }
       .section-title { font-size: 4.8vw; width: auto; display: inline-block; padding-right: 12px; margin-bottom: 32px; }
       
@@ -2452,8 +2454,10 @@
               
               if (targetContent.classList.contains('dh-layout-wrapper')) {
                   if (commonHeader) commonHeader.style.display = 'none';
+                  document.querySelector('.main-content').style.overflow = 'hidden';  // 修复：全屏布局禁用主内容滚动
               } else {
                   if (commonHeader) commonHeader.style.display = 'block';
+                  document.querySelector('.main-content').style.overflow = 'auto';   // 普通内容恢复滚动
               }
             }
           } else {
