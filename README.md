@@ -177,6 +177,7 @@
     to { box-shadow: 0 0 25px rgba(255, 165, 0, 0.8), inset 0 0 20px rgba(255, 165, 0, 0.5); }
   }
 
+  /* 导航栏固定定位，解决偏移问题 */
   .navbar {
     height: calc(100vh / 15);
     background-color: #FF8C00;
@@ -384,6 +385,7 @@
     border-left: 4px solid #FF8C00;
   }
 
+  /* 主内容区域，为固定导航栏预留空间 */
   .main-content {
     height: calc(100vh - (100vh / 15));
     width: 100%;
@@ -398,7 +400,7 @@
   .scroll-section {
     width: 100%;
     min-height: 100%;
-    padding: 0 10% 5% 10%;   /* 顶部内边距归零 */
+    padding: 5% 10%;
     display: flex;
     flex-direction: column;
   }
@@ -421,7 +423,7 @@
   .gif-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;   /* 如需完整显示可改为 contain */
+    object-fit: cover;
   }
 
   .content-section {
@@ -609,15 +611,14 @@
     font-family: 'Orbitron', sans-serif;
   }
 
-  /* 关键修复：全屏布局改为 fixed，防止滚动影响 */
   .dh-layout-wrapper {
-      position: fixed;             /* 原为 absolute，改为 fixed 避免随滚动内容移动 */
+      position: absolute;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: #ffffff;   /* 添加背景色遮挡底层 */
-      z-index: 50;                 /* 在 main-content 之上，导航栏之下 */
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      z-index: 50;
       overflow: hidden;
   }
 
@@ -788,8 +789,7 @@
   }
 
   .osc-bounding-box {
-      max-width: 700px;            /* 改为相对单位，防止溢出 */
-      width: 90vw;
+      width: 700px;
       height: 420px;
       position: relative;
       margin-left: 10%;
@@ -1146,10 +1146,6 @@
       border: 2px solid #fff;
   }
 
-  #directory-view {
-    position: relative;
-  }
-
   @media (max-width: 768px) {
       .dh-teal-box h1 { font-size: 2.8vh; white-space: nowrap; }
       .dh-col-left span { font-size: 6.4vh; font-weight: 900; -webkit-text-stroke: 1.5px #000; }
@@ -1225,7 +1221,7 @@
           height: calc(100vh - (100vh / 18.75)); 
           margin-top: calc(100vh / 18.75);
       }
-      .scroll-section { padding: 0 4% 4% 4%; }
+      .scroll-section { padding: 4% 4%; }
       .gif-container { width: 72vw; height: 28vh; }
       .section-title { font-size: 4.8vw; width: auto; display: inline-block; padding-right: 12px; margin-bottom: 32px; }
       
@@ -1983,7 +1979,7 @@
           </div>
       </div>
 
-      </section> 
+      </section> <!-- 修复缺失的 </section> -->
     </div>
 
   </main>
@@ -2454,10 +2450,8 @@
               
               if (targetContent.classList.contains('dh-layout-wrapper')) {
                   if (commonHeader) commonHeader.style.display = 'none';
-                  document.querySelector('.main-content').style.overflow = 'hidden';  // 修复：全屏布局禁用主内容滚动
               } else {
                   if (commonHeader) commonHeader.style.display = 'block';
-                  document.querySelector('.main-content').style.overflow = 'auto';   // 普通内容恢复滚动
               }
             }
           } else {
